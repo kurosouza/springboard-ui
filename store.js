@@ -1,5 +1,7 @@
 import { action, decorate, observable, computed, makeObservable } from 'mobx'
-import { useMemo } from 'react'
+import { enableStaticRendering } from 'mobx-react';
+
+enableStaticRendering(typeof window === 'undefined')
 
 let store
 
@@ -33,16 +35,6 @@ class Store {
         console.log('mobx store says hello.')
     }
 }
-/*
-decorate(Store, {
-    isLoggedIn: observable,
-    currentBusinessId: observable,
-    products: observable,
-    login: action,
-    logout: action,
-    hydrate: action
-})
-*/
 
 function initializeStore(initialData = null) {
     const _store = store ?? new Store()
