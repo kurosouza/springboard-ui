@@ -1,27 +1,57 @@
-# Example app with Grommet
+# springboard - small business loans and payments 
 
-This example shows how to use the [Grommet UI library](https://grommet.io/) with Next.js.
+*Software architecture document*
 
-It works by extending the `<Document />` to enable server-side rendering of `styled-components`, which are used by Grommet, and extending `<App />` to provide a Grommet context (and optionally a theme) for all child pages and components.
+*Author: Kuro Souza*
 
-## Deploy your own
+*Created: Saturday 03 April 2021*
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Introduction and Goals
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-grommet&project-name=with-grommet&repository-name=with-grommet)
+Springboard is a small business assistance network where business owners can assist each other to fund small, business expansion projects. With springboard, businesses can register and provide a valid identity using the NEM Symbol blockchain. This identity can be verified by other members of the network. 
 
-## How to use
+They can raise funds by posting a project including information about how much they need to run the project. Other business owners on the network can view information about their organisation and their project and they can decide to provide part of the money for the project.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+The business lending and funding system is run on a private blockchain.
 
-```bash
-npx create-next-app --example with-grommet with-grommet-app
-# or
-yarn create next-app --example with-grommet with-grommet-app
-```
+By joining the springboard network, small businesses also get access to a payment system for receiving payment for product and services from their customers. Customers can purchase goods and services by going to the business page, browsing to the product of interest and paying from their Symbol platform wallet.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Requirements Overview
 
-### Try it on CodeSandbox
+| CODE | NAME              | DESCRIPTION                                                  |
+| ---- | ----------------- | ------------------------------------------------------------ |
+| R01  | Register Business | A business supplies their basic business information including (Name, Address, Description) |
+| R02  | Create Project    | A business creates a Project (Name, Description, Amount)     |
+| R03  | View Payments     | A business owner can view all payments made to their business. A business owner can view the total payments made to a business whose project they want to fund |
+| R04  | Add Product       | A business owner can add a product to their list of available products |
+| R05  | Manage Products   | A business owner can de-list a product or group of products from their page |
+| R06  | Buy Product       | A customer can buy a product from a business owner's page. They can be sure that the product is authentic because they can verify the authenticity of the business |
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-grommet)
+Quality Goals
+
+
+
+### Stakeholders
+
+| Name                      | Description                                                  |
+| ------------------------- | ------------------------------------------------------------ |
+| Business / Business Owner | A business is an independent entity that provides a product or service to customers |
+| Customer                  | A customer is an individual or group of individuals that can purchase a product or service from a business |
+|                           |                                                              |
+
+
+
+### Constraints
+
+The application is powered by the NEM Symbol blockchain. 
+
++ It uses a private blockchain to verify businesses and facilitate lending
++ It uses a public blockchain to receive payments from customers
+
+
+
+Context and Scope
+
+Business Context
+
+Technical Context
