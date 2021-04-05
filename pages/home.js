@@ -1,10 +1,13 @@
-import { Box, Heading, Text } from 'grommet'
+import { Box, Button, Heading, Text } from 'grommet'
 import Link from 'next/link'
 import Image from 'next/image'
 
 
-export default function Home() {
+export default function Home(props) {
+    // const { store } = props
 
+    console.dir(props)
+    
     return (
         <Box direction='column' margin={{ 'horizontal': 'xlarge' }} background={<Image src='/images/pexels-trang-doan-c2.jpg' width={600} height={400} />}>
 
@@ -41,6 +44,10 @@ export default function Home() {
                 <Box background="accent-4" pad='large'>
                     <Link href="#">Verify a business</Link>
                 </Box>
+            </Box>
+
+            <Box size='small'>
+                <Button label='test store' />
             </Box>
         </Box>
     );

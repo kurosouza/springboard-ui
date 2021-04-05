@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "grommet": "^2.17.1",
+    "mobx": "^6.1.8",
+    "mobx-react": "^7.1.0",
     "next": "latest",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
